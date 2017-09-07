@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context="com.mounacheikhna.shadowselevations.MainActivity">
 
     <android.support.v7.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I have shadows"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_centerInParent="true"
         app:elevation="2dp"
         android:shadowDy="2"
         android:shadowRadius="4"/>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
