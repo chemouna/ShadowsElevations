@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cccccc"
+    android:background="@android:color/black"
     tools:context="com.mounacheikhna.shadowselevations.MainActivity">
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I have shadows"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_centerInParent="true"
         android:background="@drawable/bg"
         android:padding="10dp"
-        android:textColor="@android:color/black"
-        android:layout_centerInParent="true"
-        app:elevation="2dp"
         android:shadowDy="400"
-        android:shadowRadius="80"/>
+        android:shadowRadius="80"
+        android:text="I have shadows"
+        android:textColor="@android:color/black"
+        app:elevation="2dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/et_bg"
+            android:hint="I'm a hint!"
+            android:textColorHint="#b9b9bc"
+            android:importantForAutofill="noExcludeDescendants"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/clear_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:background="@drawable/fancy_panel_ripple"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    </FrameLayout>
+
 
 </RelativeLayout>
